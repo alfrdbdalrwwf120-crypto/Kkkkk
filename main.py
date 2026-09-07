@@ -3,6 +3,8 @@
 نقطة تشغيل البوت الرئيسية - تسجيل كل الـ handlers.
 """
 import logging
+import http.server, threading
+threading.Thread(target=lambda: http.server.HTTPServer(("0.0.0.0", int(__import__("os").environ.get("PORT", 3000))), http.server.BaseHTTPRequestHandler).serve_forever(), daemon=True).start()
 
 from telegram import Update
 from telegram.ext import (
