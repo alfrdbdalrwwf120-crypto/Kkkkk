@@ -1,0 +1,5 @@
+python-telegram-bot[job-queue]==21.4
+SQLAlchemy==2.0.32
+python-dotenv==1.0.1
+anthropic==0.34.2
+psycopg2-binary==2.9.9
